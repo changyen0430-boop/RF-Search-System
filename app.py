@@ -148,7 +148,7 @@ if selected_bt:
     filtered_df = filtered_df[filtered_df["Feature Support_BT"].isin(selected_bt)]
 
 # --- 4. 主要顯示區域 ---
-st.title("📡 RF Spec 智能搜尋系統 by RF Tommy")
+st.title("📡 RF Spec Search System by RF Tommy")
 st.metric("符合結果", len(filtered_df))
 
 event = st.dataframe(
