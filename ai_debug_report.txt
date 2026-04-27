@@ -1,0 +1,50 @@
+
+
+============================================================
+Run Date: 2026-04-27 16:00:47.245425
+============================================================
+=== Logic Analysis for: AP6275S datasheet.pdf ===
+[Recall Memory] Strategy for AMPAK: {'antenna_priority': 'full_text_fallback', 'bt_selection': 'anti_noise_weighted', 'noise_triggers': ['802.15.4', 'THREAD', 'ZIGBEE'], 'hardware_anchor': 5.3, 'wifi_6e_boost': True, 'dim_regex': '(\\d+\\.?\\d*)\\s*[xX*]\\s*(\\d+\\.?\\d*)', 'dim_search_mode': 'table_first'}
+[Wi-Fi Logic] Result: Wi-Fi 6 ax mode (6GHz Evidence Found: False)
+[Antenna Logic] Pool: [2] -> Result: 2x2
+[BT Decision] Final Scores: {5.3: 1, 4.1: 1, 5.0: 1} -> BT 5.3
+[IoT Logic] Detected: []
+[T-put Logic] Mbps Found: [1200.0, 1200.0, 11.0, 18.0, 24.0, 36.0, 48.0, 54.0, 11.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 18.0, 24.0, 36.0, 48.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0] -> Result: 1200
+[Dimension Logic] Result: 15 x 13 x 1.55 MM (Found via: TABLE_ROW)
+[Dimension Logic] Regex Used: (\d+\.?\d*)\s*[xX*]\s*(\d+\.?\d*)
+[Description Logic] Final: WI-FI 6 & BT 5.3 Module
+
+=== Logic Analysis for: AP6281S datasheet_EN.pdf ===
+[Recall Memory] Strategy for AMPAK: {'antenna_priority': 'full_text_fallback', 'bt_selection': 'anti_noise_weighted', 'noise_triggers': ['802.15.4', 'THREAD', 'ZIGBEE'], 'hardware_anchor': 5.3, 'wifi_6e_boost': True, 'dim_regex': '(\\d+\\.?\\d*)\\s*[xX*]\\s*(\\d+\\.?\\d*)', 'dim_search_mode': 'table_first'}
+[Wi-Fi Logic] Result: Wi-Fi 6E ax mode (6GHz Evidence Found: True)
+[Antenna Logic] Pool: [] -> Result: 1x1
+[BT Noise Detected] BT 5.4 near ['802.15.4', 'THREAD']. Deducting score.
+[BT Noise Detected] BT 5.4 near ['802.15.4', 'THREAD']. Deducting score.
+[BT Decision] Final Scores: {5.4: -38, 5.3: 1, 4.1: 1, 5.0: 1} -> BT 5.3
+[IoT Logic] Detected: ['Thread']
+[T-put Logic] Mbps Found: [600.0, 600.0, 11.0, 18.0, 24.0, 36.0, 48.0, 54.0, 11.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 18.0, 24.0, 36.0, 48.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0] -> Result: 600
+[Dimension Logic] Result: 12 x 12 x 1.95 MM (Found via: TABLE_ROW)
+[Dimension Logic] Regex Used: (\d+\.?\d*)\s*[xX*]\s*(\d+\.?\d*)
+[Description Logic] Final: WI-FI 6E & BT 5.3 & Thread Module
+
+=== Logic Analysis for: AP6398S datasheet_EN.pdf ===
+[Recall Memory] Strategy for AMPAK: {'antenna_priority': 'full_text_fallback', 'bt_selection': 'anti_noise_weighted', 'noise_triggers': ['802.15.4', 'THREAD', 'ZIGBEE'], 'hardware_anchor': 5.3, 'wifi_6e_boost': True, 'dim_regex': '(\\d+\\.?\\d*)\\s*[xX*]\\s*(\\d+\\.?\\d*)', 'dim_search_mode': 'table_first'}
+[Wi-Fi Logic] Result: Wi-Fi 5 ac mode (6GHz Evidence Found: False)
+[Antenna Logic] Pool: [2] -> Result: 2x2
+[BT Decision] Final Scores: {5.4: 3, 4.1: 1} -> BT 5.4
+[IoT Logic] Detected: []
+[T-put Logic] Mbps Found: [867.0, 867.0, 11.0, 18.0, 24.0, 36.0, 48.0, 54.0, 11.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 18.0, 24.0, 36.0, 48.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0] -> Result: 867
+[Dimension Logic] Result: 15 x 13 x 1.85 MM (Found via: TABLE_ROW)
+[Dimension Logic] Regex Used: (\d+\.?\d*)\s*[xX*]\s*(\d+\.?\d*)
+[Description Logic] Final: WI-FI 5 & BT 5.4 Module
+
+=== Logic Analysis for: AP6612X datasheet_V0.6_20260211.pdf ===
+[Recall Memory] Strategy for AMPAK: {'antenna_priority': 'full_text_fallback', 'bt_selection': 'anti_noise_weighted', 'noise_triggers': ['802.15.4', 'THREAD', 'ZIGBEE'], 'hardware_anchor': 5.3, 'wifi_6e_boost': True, 'dim_regex': '(\\d+\\.?\\d*)\\s*[xX*]\\s*(\\d+\\.?\\d*)', 'dim_search_mode': 'table_first'}
+[Wi-Fi Logic] Result: Wi-Fi 6E ax mode (6GHz Evidence Found: True)
+[Antenna Logic] Pool: [1] -> Result: 1x1
+[BT Decision] Final Scores: {6.0: 1, 4.1: 1, 5.0: 1} -> BT 6.0
+[IoT Logic] Detected: ['Zigbee', 'Thread']
+[T-put Logic] Mbps Found: [114.7, 11.0, 18.0, 24.0, 36.0, 48.0, 54.0, 11.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0, 18.0, 24.0, 36.0, 48.0, 54.0, 24.0, 36.0, 12.0, 48.0, 18.0, 54.0] -> Result: 114
+[Dimension Logic] Result: 12 x 12 x 1.82 MM (Found via: TABLE_ROW)
+[Dimension Logic] Regex Used: (\d+\.?\d*)\s*[xX*]\s*(\d+\.?\d*)
+[Description Logic] Final: WI-FI 6E & BT 6.0 & Zigbee & Thread Module
