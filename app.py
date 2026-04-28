@@ -146,6 +146,57 @@ if selected_wifi:
     filtered_df = filtered_df[filtered_df["Feature Support_Wi-Fi"].isin(selected_wifi)]
 if selected_bt:
     filtered_df = filtered_df[filtered_df["Feature Support_BT"].isin(selected_bt)]
+    
+    
+# --- [在這之間插入：3. 下載過濾後的 Excel 功能] ---
+# --- 3. 下載過濾後的 Excel 功能 (美化版) ---
+st.sidebar.divider()
+if not filtered_df.empty:
+    buffer = io.BytesIO()
+    
+    # 使用 xlsxwriter 進行美化寫入
+    with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
+        filtered_df.to_excel(writer, index=False, sheet_name='Search_Results')
+        
+        workbook  = writer.book
+        worksheet = writer.sheets['Search_Results']
+
+        # --- 定義美化格式 ---
+        # 1. 標題格式：深藍底、白字、粗體、框線、置中
+        header_format = workbook.add_format({
+            'bold': True,
+            'text_wrap': True,
+            'valign': 'vcenter',
+            'align': 'center',
+            'fg_color': '#4472C4',  # 經典專業藍
+            'font_color': 'white',
+            'border': 1
+        })
+
+        # 2. 內容格式：框線、水平/垂直置中
+        cell_format = workbook.add_format({
+            'valign': 'vcenter',
+            'align': 'center',
+            'border': 1
+        })
+
+        # --- 應用格式 ---
+        # 寫入標題並套用格式
+        for col_num, value in enumerate(filtered_df.columns.values):
+            worksheet.write(0, col_num, value, header_format)
+            # 自動調整欄寬 (抓標題長度或內容長度，給個基本寬度)
+            worksheet.set_column(col_num, col_num, 18, cell_format)
+
+    st.sidebar.download_button(
+        label="📥 下載美化版 Excel",
+        data=buffer.getvalue(),
+        file_name=f"RF_Spec_Export_{pd.Timestamp.now().strftime('%Y%m%d_%H%M')}.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        use_container_width=True
+    )
+else:
+    st.sidebar.info("💡 尚無符合條件的資料可供下載")
+# ----------------------------------------------    
 
 # --- 4. 主要顯示區域 ---
 st.title("📡 RF Spec Search System by RF Tommy")
