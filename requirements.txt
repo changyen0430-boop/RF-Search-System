@@ -1,6 +1,8 @@
 streamlit
 pandas
-openpyxl
 requests
-pymupdf
+fitz
+PyMuPDF
 Pillow
+openpyxl
+xlsxwriter
