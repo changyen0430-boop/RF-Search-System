@@ -62,7 +62,7 @@ st.sidebar.divider()
 
 # IoT 與 NFC 過濾器
 st.sidebar.subheader("🌐 IoT 協定過濾")
-iot_options = st.sidebar.multiselect("選擇 IoT 協定 (AND 模式)", ["Zigbee", "Thread", "Matter"])
+iot_options = st.sidebar.multiselect("選擇 IoT 協定 (AND 模式)", ["Zigbee", "Thread", "Matter", "Z-wave"])
 
 # --- 【修正】NFC 過濾器 ---
 st.sidebar.subheader("🆔 安全元件支援")
